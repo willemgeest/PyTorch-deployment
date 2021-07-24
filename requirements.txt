@@ -1,3 +1,4 @@
+-f https://download.pytorch.org/whl/torch_stable.html
 certifi==2021.5.30
 charset-normalizer==2.0.3
 click==8.0.1
@@ -17,8 +18,8 @@ pyparsing==2.4.7
 python-dateutil==2.8.2
 requests==2.26.0
 six==1.16.0
-https://download.pytorch.org/whl/cpu/torch-1.9.0%2Bcpu-cp38-cp38-win_amd64.whl
-https://download.pytorch.org/whl/cpu/torchvision-0.10.0%2Bcpu-cp38-cp38-win_amd64.whl
+torch==1.9.0+cpu
+torchvision==0.10.0+cpu
 typing-extensions==3.10.0.0
 urllib3==1.26.6
 Werkzeug==2.0.1
