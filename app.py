@@ -28,7 +28,7 @@ if __name__ == '__main__':
     app.run()
 
 
-#file = open('ragdoll.jpg','rb')
+#file = open('test_hertogjan.jpg','rb')
 #img_bytes = file.read()
 #imageStream = io.BytesIO(img_bytes)
 #img = Image.open(imageStream)
