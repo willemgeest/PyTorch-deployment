@@ -90,7 +90,6 @@ def beer_classification(img, class_int=None):
     # tranforms tensors with results to probabilities
     sm = torch.nn.Softmax(dim=1)  # use softmax to convert tensor values to probs (dim = columns (0) or rows (1) have to sum up to 1?)
     probabilities = sm(pred)
-    return probabilities
 
     probabilities = probabilities[0]
 
@@ -143,5 +142,5 @@ def beer_classification(img, class_int=None):
     # save heatmap
     #Image.fromarray(mix).save(heatmap_location)
 
-    return class_names[pred.argmax()]#, probabilities, Image.fromarray(mix)
+    return class_names[pred.argmax()], probabilities, Image.fromarray(mix)
 

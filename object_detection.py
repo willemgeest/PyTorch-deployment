@@ -11,9 +11,8 @@ def get_obj_det_model(local=False):
         torch.hub.set_dir('.')
     return torchvision.models.detection.fasterrcnn_resnet50_fpn(pretrained=True, min_size=800).eval()
 
-def crop_beers(image, model, threshold, GPU=True):
+def crop_beers(image, boxes):
     #  device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    boxes, classes, labels, preds = find_bottles(image, model, detection_threshold=threshold, GPU=GPU)
     if len(boxes) > 0:
         image_cropped = image.crop(tuple(boxes[0]))  # crop image: select only relevant part of pic
         # todo correct als er 2 boxes zijn (nu pak degene met hoogste pred, boxes is al gesorteerd op pred)
